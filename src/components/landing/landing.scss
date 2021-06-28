@@ -1,0 +1,56 @@
+@import "../../styles/variables.scss";
+
+.landing--outer-container {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 50px);
+    width: 100vw;
+    background-image: url("../../images/home.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.landing--container {
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+    width: 100%;
+}
+
+.landing--home-introduction-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: $landing-border-padding;
+    height: calc(100% );
+    width: calc(100% - 60px);
+    border: 3px solid $cultured;
+    background: #0012196c;
+}
+
+.landing--text-section {
+    color: $cultured;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.landing--main-text {
+    font-size: 4rem;
+    padding: 10px;
+}
+
+.landing--secondary-text {
+    font-size: 2rem;
+}
+
+.landing--cards-container {
+    display: flex;
+    height: 600px;
+    width: 100%;
+    background: $licolnGreen;
+}
