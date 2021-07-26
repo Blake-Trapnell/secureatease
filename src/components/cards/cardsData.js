@@ -6,17 +6,17 @@ import forSale from "../../images/forsale.jpg";
 const cardData = [
 
     {
+        title: "For sale by owner",
+        text: "Personal Property For sale",
+        background: `url(${forSale})`,
+        buttonText: "View Homes"
+    },
+    {
         title: "Rentals",
         text: "Rental listings, Prices, Photo tours",
         background: `url(${rentals})`,
         buttonText: "View listings"
 
-    },
-    {
-        title: "For sale by owner",
-        text: "Personal Property For sale",
-        background: `url(${forSale})`,
-        buttonText: "View Homes"
     },
     {
         title: "Design",
@@ -29,7 +29,7 @@ const cardData = [
         text: "Home, rental, and property cleaning services",
         background: `url(${clean})`,
         buttonText: "View Services"
-    }
+    },
 ]
 
 export default cardData;
