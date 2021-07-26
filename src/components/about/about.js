@@ -19,7 +19,6 @@ const About = () => {
                 <article className="grid-box about--contact-section">
                     <h6>801-989-4504</h6>
                     <h6>Secureatease@gmail.com</h6>
-                    <h6></h6>
                 </article> 
                 </section>
             </div>

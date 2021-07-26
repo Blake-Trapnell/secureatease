@@ -1,4 +1,3 @@
-import Landing from "./components/landing/landing.js";
 import Navbar from "./components/nav/navbar.js";
 import './App.scss';
 import Main from "./Main.js";
