@@ -1,3 +1,4 @@
+import About from "../about/about.js";
 import Cards from "../cards/cards.js";
 import "./landing.scss";
 
@@ -17,7 +18,7 @@ const Landing = () => {
 						</section>
 					</div>
 						<Cards/>
-			<div className={"about"}></div>
+					<About/>
 				</div>
 			</div>
 		</section>

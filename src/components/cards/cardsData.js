@@ -28,7 +28,7 @@ const cardData = [
         title: "Cleaning Services",
         text: "Home, rental, and property cleaning services",
         background: `url(${clean})`,
-        buttonText: "View services"
+        buttonText: "View Services"
     }
 ]
 
