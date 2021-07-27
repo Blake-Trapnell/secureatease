@@ -64,6 +64,11 @@
 	margin-bottom: 20px;
 }
 
+a {
+	color: inherit; /* blue colors for links too */
+    text-decoration: inherit; /* no underline */
+}
+
 .about {
     height: 800px;
     width: 100%;

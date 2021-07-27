@@ -1,4 +1,5 @@
 import cardData from "./cardsData";
+import { Link } from "react-router-dom";
 
 import "./cards.scss";
 
@@ -28,7 +29,9 @@ const Cards = () => {
 									}
 								>
 									<button className="card--action-button action--button">
+										<Link to={el.link}>
 										{el.buttonText}
+										</Link>
 									</button>
 								</div>
 							</div>

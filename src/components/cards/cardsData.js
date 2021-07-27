@@ -9,26 +9,29 @@ const cardData = [
         title: "For sale by owner",
         text: "Personal Property For sale",
         background: `url(${forSale})`,
-        buttonText: "View Homes"
+        buttonText: "View Homes",
+        link: "/for-sale",
     },
     {
         title: "Rentals",
         text: "Rental listings, Prices, Photo tours",
         background: `url(${rentals})`,
-        buttonText: "View listings"
-
+        buttonText: "View listings",
+        link: "/rentals",
     },
     {
         title: "Design",
         text: "Interior and Exterior design, Decor, Staging consult",
         background: `url(${design})`,
-        buttonText: "See our designs"
+        buttonText: "See our designs",
+        link: "/design",
     },
     {
         title: "Cleaning Services",
         text: "Home, rental, and property cleaning services",
         background: `url(${clean})`,
-        buttonText: "View Services"
+        buttonText: "View Services",
+        link: "/cleaning-services",
     },
 ]
 
