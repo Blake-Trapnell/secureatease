@@ -1,59 +1,109 @@
 @import "../../styles//variables.scss";
 
 .navbar--outer-container {
-    height: 50px;
-    width: calc(100vw);
+	height: 50px;
+	width: calc(100vw);
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	background: $cultured;
+	color: $richBlack;
+	font-family: $secondaryFontFamily;
+	font-size: 1rem;
+	position: sticky;
+	top: 0;
+	font-weight: 400;
+}
+
+.navbar--mobile-menu {
+	display: none;
+	position: sticky;
+	left: 50px;
+    flex-direction: column;
+}
+
+.navbar--mobile-menu.dropdown-active {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: row;
-    background: $cultured;
-    color: $richBlack;
-    font-family: $secondaryFontFamily;
-    font-size: 1rem;
-    position: sticky;
-    top: 0;
-    font-weight: 400;
+    height: max-content;
+	width: calc(100vw - 100px);
+	background-color: $cultured;
+	position: absolute;
+	left: 50px;
+	top: 50px;
+}
+
+
+.navbar--hamburger-container {
+	position: relative;
+	left: 50px;
 }
 
 .navbar--navigation-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: auto;
-    position: relative;
-    left: 50px;
-}
-
-.navbar--info-section {
-    display: flex;
-    align-items: center;
-    position: relative;
-    right: 50px;
-    font-size: 1.4rem;
-    width: 300px;
-    justify-content: space-between;
-}
-
-.navbar--login {
-    display: flex;
-    align-items: center;
-}
-
-.navbar--login-logo {
-    height: 30px;
-    width: 30px;
-    background-image: url("../../images/login.png");
-    background-position: center center;
-    background-size: cover;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: auto;
+	position: relative;
+	left: 50px;
 }
 
 .navbar--location {
-    color: inherit; /* blue colors for links too */
-    text-decoration: inherit; /* no underline */
-    padding: 5px;
-    cursor: pointer;
-    &:hover {
-        color: $tealBlue;
+	color: inherit; /* blue colors for links too */
+	text-decoration: inherit; /* no underline */
+    padding: 10px;
+    font-size: 1.3rem;
+	cursor: pointer;
+    transition: 0.2s;
+	&:hover {
+		color: $tealBlue;
+        background-color: #e0e0e0;
+	}
+}
+
+.container {
+	display: inline-block;
+	cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+	width: 35px;
+	height: 5px;
+	background-color: #333;
+	margin: 6px 0;
+	transition: 0.4s;
+}
+
+@media screen and (min-width: 600px) {
+	.navbar--hamburger-container {
+		display: none;
+	}
+    .navbar--mobile-menu {
+        display: flex;
+        flex-direction: row;
+		align-content: flex-start;
+		align-items: flex-start;
+		text-align: start;
+    }
+
+    .navbar--location {
+        font-size: 1rem;
+        &:hover {
+            background-color: none;
+        }
+    }
+
+    .navbar--mobile-menu.dropdown-active {
+		display: flex;
+        flex-direction: row;
+        height: 50px;
+		align-content: flex-start;
+		align-items: center;
+		text-align: start;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 50px;
     }
 }

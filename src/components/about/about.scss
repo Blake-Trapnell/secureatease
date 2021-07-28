@@ -50,3 +50,27 @@
       align-items: center;
       justify-content: center;
   }
+
+  @media screen and (max-width: 850px) {
+    .about--information-container {
+        width:100%;
+        height: calc(100% - 70px);
+        display:grid;
+        grid-template-columns: 90%;
+        grid-template-rows: 300px 300px 300px 300px;
+        justify-content: center;
+    }
+
+    .about--outer-container {
+        height: 1300px;
+        width: 100vw;
+        position: relative;
+        left: -50px;
+        background-color: $richBlack;
+        display: flex;
+        flex-direction: column;
+        color: $cultured;
+        font-size: 2rem;
+        font-family: $secondaryFontFamily;
+    }
+}

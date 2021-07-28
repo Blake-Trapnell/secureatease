@@ -13,7 +13,7 @@
 .landing--background {
     height: 80%;
     width: calc(100% - 100px);
-    background-image: url("../../images/home.jpg");
+    background-image: url("../../images/home.webp");
     background-position: center 70%;
     background-size: cover;
     background-attachment: fixed;
@@ -73,7 +73,25 @@
 }
 
 @media screen and (max-width: 850px) {
+
+    .landing--home-introduction-section {
+        height: 50vh;
+    }
     .landing--main-text{
         font-size: 5rem;
     } 
+}
+
+@media screen and (max-width: 550px) {
+    .landing--main-text{
+        font-size: 3rem;
+    } 
+
+    .landing--home-introduction-section {
+        margin: 0;
+        height: 70vh;
+        border: none;
+        width: 100%;
+        min-height: 100%;
+    }
 }

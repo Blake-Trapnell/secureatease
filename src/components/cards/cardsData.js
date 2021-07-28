@@ -1,7 +1,7 @@
-import design from "../../images/interiordesign.jpg";
-import rentals from "../../images/rentals.jpg"
-import clean from "../../images/clean.jpg";
-import forSale from "../../images/forsale.jpg";
+import design from "../../images/interiordesign.webp";
+import rentals from "../../images/rentals.webp"
+import clean from "../../images/clean.webp";
+import forSale from "../../images/forsale.webp";
 
 const cardData = [
 
