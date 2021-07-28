@@ -11,8 +11,9 @@
 	font-family: $secondaryFontFamily;
 	font-size: 1rem;
 	position: sticky;
-	top: 0;
+    top: 0;
 	font-weight: 400;
+    z-index: 1;
 }
 
 .navbar--mobile-menu {
@@ -25,17 +26,27 @@
 .navbar--mobile-menu.dropdown-active {
     display: flex;
     height: max-content;
-	width: calc(100vw - 100px);
-	background-color: $cultured;
+	width: calc(50%);
+	background-color: #e0e0e0;
 	position: absolute;
 	left: 50px;
 	top: 50px;
+    box-shadow: 5px 5px 5px 3px rgba(0, 0, 0, 0.404);
 }
 
 
-.navbar--hamburger-container {
+.navbar--hamburger-outer-container {
 	position: relative;
 	left: 50px;
+    height: 100%;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	cursor: pointer;
+    &.dropdown-active {
+        background-color: #e0e0e0;;
+    }
 }
 
 .navbar--navigation-section {
@@ -56,14 +67,10 @@
     transition: 0.2s;
 	&:hover {
 		color: $tealBlue;
-        background-color: #e0e0e0;
+        background-color: $cultured;
 	}
 }
 
-.container {
-	display: inline-block;
-	cursor: pointer;
-}
 
 .bar1,
 .bar2,

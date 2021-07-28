@@ -7,7 +7,9 @@ const About = () => {
 			<div className={"about--outer-container"}>
                 <div className="about--transition"></div>
                 <section className="about--information-container">
-                <h3 className="grid-box">Mission Statement</h3>
+                <h3 className="grid-box">With Secure@Ease Management, there is no need to stress!
+                Our mission is to promote secure and professional services. Our management team puts
+                your priorities first so that you can feel at ease. </h3>
                 <div className="about--display-photo grid-box" style={{
                     backgroundImage: `url(${aboutBackgroundOne})`,
                     backgroundPosition: "center",

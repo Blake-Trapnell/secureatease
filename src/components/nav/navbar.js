@@ -14,13 +14,15 @@ const Navbar = () => {
 		<nav className={"navbar--outer-container"}>
 			<div
 				onClick={() => toggleDropdown()}
-				className={`navbar--hamburger-container ${
+				className={`navbar--hamburger-outer-container ${
 					showDropdown ? `dropdown-active` : ``
 				}`}
 			>
+				<div className="navbar--hamburger-container">
 				<div className="bar1"></div>
 				<div className="bar2"></div>
 				<div className="bar3"></div>
+				</div>
 			</div>
 			<div
 				className={`navbar--mobile-menu ${
