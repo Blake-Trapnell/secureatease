@@ -20,7 +20,7 @@ const About = () => {
                 }}></div>
                 <article className="grid-box about--contact-section">
                     <h6>801-989-4504</h6>
-                    <h6>Secureatease@gmail.com</h6>
+                    <a href={"mailto:secure.at.ease.management@gmail.com"}>secure.at.ease.managment@gmail.com</a>
                 </article> 
                 </section>
             </div>

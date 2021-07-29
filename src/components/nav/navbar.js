@@ -15,7 +15,7 @@ const Navbar = () => {
 				height: window.innerWidth,
 				width: window.innerWidth,
 			});
-			if (window.innerWidth > 600) {
+			if (window.innerWidth > 750) {
 				setShowDropdown(false);
 			}
 		};
@@ -26,7 +26,7 @@ const Navbar = () => {
 	});
 
 	const toggleDropdown = () => {
-		if (dimensions.width < 600) {
+		if (dimensions.width < 750) {
 			setShowDropdown(!showDropdown);
 		}
 		return;
@@ -88,6 +88,7 @@ const Navbar = () => {
 				>
 					Cleaning Services
 				</Link>
+			<a href={"tel:1-801-989-4504"} className={"navbar--location"}>801-989-4504</a>
 			</div>
 		</nav>
 	);
