@@ -8,7 +8,7 @@ const Cards = () => {
 		<article className={"cards--outer-container"}>
 			{cardData.map((el, i) => {
 				return (
-					<section className="card--outer-container">
+					<section key={el.title} className="card--outer-container">
 						<div
 							className={"card--background"}
 							style={{

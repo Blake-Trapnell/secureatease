@@ -1,12 +1,34 @@
 import "./navbar.scss";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Navbar = () => {
 	const [showDropdown, setShowDropdown] = useState(false);
+	const [dimensions, setDimensions] = useState({
+		height: window.innerHeight,
+		width: window.innerWidth,
+	});
+
+	useEffect(() => {
+		const handleResize = () => {
+			setDimensions({
+				height: window.innerWidth,
+				width: window.innerWidth,
+			});
+			if (window.innerWidth > 600) {
+				setShowDropdown(false);
+			}
+		};
+		window.addEventListener("resize", handleResize);
+		return (_) => {
+			window.removeEventListener("resize", handleResize);
+		};
+	});
 
 	const toggleDropdown = () => {
-		setShowDropdown(!showDropdown);
+		if (dimensions.width < 600) {
+			setShowDropdown(!showDropdown);
+		}
 		return;
 	};
 
@@ -18,10 +40,12 @@ const Navbar = () => {
 					showDropdown ? `dropdown-active` : ``
 				}`}
 			>
-				<div className="navbar--hamburger-container">
-				<div className="bar1"></div>
-				<div className="bar2"></div>
-				<div className="bar3"></div>
+				<div className={`navbar--hamburger-container ${
+					showDropdown ? `dropdown-active` : ``
+				}`}>
+					<div className="hamburger-bar bar1"></div>
+					<div className="hamburger-bar bar2"></div>
+					<div className="hamburger-bar bar3"></div>
 				</div>
 			</div>
 			<div
@@ -29,19 +53,39 @@ const Navbar = () => {
 					showDropdown ? `dropdown-active` : ``
 				}`}
 			>
-				<Link to="/" className={"navbar--location"}>
+				<Link
+					onClick={toggleDropdown}
+					to="/"
+					className={"navbar--location"}
+				>
 					Secure@ease
 				</Link>
-				<Link to="/for-sale" className={"navbar--location"}>
+				<Link
+					onClick={toggleDropdown}
+					to="/for-sale"
+					className={"navbar--location"}
+				>
 					For Sale
 				</Link>
-				<Link to="/rentals" className={"navbar--location"}>
+				<Link
+					onClick={toggleDropdown}
+					to="/rentals"
+					className={"navbar--location"}
+				>
 					Rentals
 				</Link>
-				<Link to="/design" className={"navbar--location"}>
+				<Link
+					onClick={toggleDropdown}
+					to="/design"
+					className={"navbar--location"}
+				>
 					Design
 				</Link>
-				<Link to="/cleaning-services" className={"navbar--location"}>
+				<Link
+					onClick={toggleDropdown}
+					to="/cleaning-services"
+					className={"navbar--location"}
+				>
 					Cleaning Services
 				</Link>
 			</div>
