@@ -1,8 +1,10 @@
+import "./forSale.scss";
+
+// import MapletonImages from "./forSaleImages.js";
 
 const ForSale = () => {
 	return (
         <div>
-            ForSale
         </div>
 	);
 };

@@ -1,6 +1,6 @@
 import "./about.scss";
-import aboutBackgroundOne from "../../images/Website photos/79.jpg";
-import aboutBackgroundTwo from "../../images/Website photos/58.jpg";
+import aboutBackgroundOne from "../../images/ForSale/WhiteHome/79.jpg";
+import aboutBackgroundTwo from "../../images/ForSale/WhiteHome/58.jpg";
 
 const About = () => {
 	return (
