@@ -1,0 +1,46 @@
+@import "../../styles/variables.scss";
+
+.for-sale--outer-container {
+    height: calc(100vh - 150px);
+    width: calc(100vw - 100px);
+    background-color: $richBlack;
+    padding: 50px;
+
+}
+
+.for-sale--listing-outer-container {
+    height: 400px;
+    width: 80%;
+    color: $richBlack;
+    background-color: $cultured;
+    border: 3px solid $tealBlue;
+    border-radius:  0px 35px 0px 0px;
+    display: flex;
+}
+
+.for-sale--listing-background {
+    object-fit: cover;
+    object-position: center 45%;
+    height: 400px;
+    width: 100%;
+    clip-path: polygon(0% 0, 100% 0, 100% 100%, 10% 100%);
+    border-radius:  0px 35px 0px 0px;
+    position: relative;
+    left: 0;
+}
+
+.for-sale--listing-container {
+    width: 35%;
+    height: 100%;
+    background-color: $cultured;
+    font-family: $secondaryFontFamily;
+    font-size: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.for-sale--listing-contact {
+    font-size: 1rem;
+    line-break: anywhere;
+}
+
