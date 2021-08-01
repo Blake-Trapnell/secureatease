@@ -13,34 +13,54 @@
     width: 80%;
     color: $richBlack;
     background-color: $cultured;
-    border: 3px solid $tealBlue;
     border-radius:  0px 35px 0px 0px;
     display: flex;
 }
 
 .for-sale--listing-background {
-    object-fit: cover;
-    object-position: center 45%;
+    background-size: contain;
+    // object-position: center 45%;
     height: 400px;
     width: 100%;
     clip-path: polygon(0% 0, 100% 0, 100% 100%, 10% 100%);
     border-radius:  0px 35px 0px 0px;
     position: relative;
     left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
 }
 
 .for-sale--listing-container {
-    width: 35%;
+    width: 300px;
     height: 100%;
     background-color: $cultured;
     font-family: $secondaryFontFamily;
     font-size: 1.4rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
+    align-content: flex-start;
 }
 .for-sale--listing-contact {
     font-size: 1rem;
     line-break: anywhere;
 }
+.for-sale--listing-contact-container {
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+}
 
+.for-sale--listing-info-container {
+    margin-top: 50px;
+}
+
+.for-sale--action-button {
+    height: fit-content;
+    font-size: 2rem;
+    background-color: $sealBrown;
+    margin-bottom: 50px;
+}
