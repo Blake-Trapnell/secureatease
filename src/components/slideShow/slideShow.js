@@ -21,7 +21,7 @@ const Slideshow = (images) => {
     
     return (
         <div className={"slideshow--outer-container"}>
-            <img className={"slideshow--current-image"} src={images.images[imageLocation]} alt={`slideshow image ${0}`}/>
+            <img className={"slideshow--current-image"} src={images.images[imageLocation]} alt={`slideshow ${0}`}/>
             <button onClick={()=>transitionImage(-1)} className={"slideshow--navigation-button"}>&#60;</button>
             <button onClick={()=>transitionImage(1)} className={"slideshow--navigation-button"}>&#62;</button>
         </div>
