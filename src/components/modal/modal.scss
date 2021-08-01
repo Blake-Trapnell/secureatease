@@ -1,0 +1,23 @@
+@import "../../styles/variables.scss";
+
+.image-modal--inactive.image-modal {
+    display: none;
+}
+
+.image-modal {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: $transparentCultured;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-modal--outer-container {
+    height: 80%;
+    width: 80%;
+}

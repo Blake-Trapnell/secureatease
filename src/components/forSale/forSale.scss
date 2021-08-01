@@ -58,9 +58,19 @@
     margin-top: 50px;
 }
 
+.for-sale--button-container {
+    margin-bottom: 50px;
+    &:hover {
+        .for-sale--action-button {
+            background-color: $alloyorange;
+        }
+    }
+}
+
 .for-sale--action-button {
-    height: fit-content;
+    height: calc(100% - 10px);
+    width: calc(100% - 10px);
     font-size: 2rem;
     background-color: $sealBrown;
-    margin-bottom: 50px;
+    transition: 0.2s;
 }
