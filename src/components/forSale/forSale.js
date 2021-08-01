@@ -10,6 +10,8 @@ const ForSale = () => {
 
     const [showModal, setShowModal] = useState(false)
 
+	const showHideModalClassName = showModal ? "image-modal--active" : "image-modal--inactive";
+
     const toggleModal = (modalState) => {
         setShowModal(!modalState)
     }
@@ -19,10 +21,10 @@ const ForSale = () => {
 				return (
 					<div
 						key={el.key}
-						className={"for-sale--listing-outer-container"}
+						className={`${showHideModalClassName} for-sale--listing-outer-container`}
 					>
-                        <Modal toggleModal={toggleModal} show={showModal} open={showModal}>
-							<Slideshow images={MapletonImages}/>
+                        <Modal toggleModal={toggleModal} showModal={showModal} open={showModal} showButton={false}>
+							<Slideshow images={MapletonImages} toggleModal={toggleModal} show={showModal}/>
 						</Modal>
 						<div className={"for-sale--listing-container"}>
 							<div className={"for-sale--listing-info-container"}>

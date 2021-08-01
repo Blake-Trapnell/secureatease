@@ -1,15 +1,95 @@
+@import "../../styles/variables.scss";
+
 .slideshow--outer-container {
     height: 100%;
     width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
 };
 
 .slideshow--current-image {
+    position: absolute;
     height: 100%;
     width: 100%;
-    object-fit: contain;
-    object-position: center;
+    background-size:  cover;
+    background-position: center;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: $shadow;
+    background-color: $cultured
 };
 
-.slideshow--navigation-button {
-    margin: 0 40px 0 40px;
+.slideshow--navigation {
+    height: 100%;
+    width: 80px;
+    border: none;
+    background: none;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 };
+.slideshow--navigation-left {
+    display: flex;
+    align-items: flex-start;
+    padding-right: calc(30% - 50px);
+    cursor: pointer
+}
+.slideshow--navigation-right {
+    padding-left: calc(30% - 50px);
+    display: flex;
+    align-items: flex-end;
+    cursor: pointer
+}
+
+.slideshow--preview-image {
+    position: absolute;
+    top: 5%;
+    height: 90%;
+    width: 100%;
+    box-shadow: $shadow;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    background-color: $cultured
+}
+
+.slideshow--previous-image {
+    left: - 50px;
+}
+
+.slideshow--next-image {
+    right: - 50px;
+    z-index: -1;
+}
+
+.slideshow--navigation-button {
+    height: 100%;
+    width: 80px;
+    background-color: $transparentCultured;
+    border: none;
+    font-family: $secondaryFontFamily;
+    font-size: 2rem;
+    text-align: center;
+    color: $tealBlue;
+}
+
+.slideshow--navigation {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+@media screen and (max-width: 850px) {
+    .slideshow--preview-image {
+        display: none;
+    }
+    .action--button-mobile {
+        height: fit-content;
+        width: fit-content;
+        padding: 5px;
+    }
+}

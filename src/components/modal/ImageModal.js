@@ -1,12 +1,14 @@
 import './modal.scss';
 
-const Modal = ({ toggleModal, show, children }) => {
-  const showHideClassName = show ? "image-modal--active" : "image-modal--inactive";
+const Modal = ({ toggleModal, showModal, children, showButton }) => {
+  const showHideModalClassName = showModal ? "image-modal--active" : "image-modal--inactive";
+  const showHideButtonClassName = showButton ? "image-modal--show-button" : "image-modal--hide-button";
+
   return (
-    <div className={`${showHideClassName} image-modal`}>
-      <section className={`${showHideClassName} image-modal--outer-container`}>
+    <div className={`${showHideModalClassName} image-modal`}>
+      <section className={`${showHideModalClassName} image-modal--outer-container`}>
         {children}
-        <button type="button" onClick={()=>toggleModal(show)}>
+        <button className={showHideButtonClassName} type="button" onClick={()=>toggleModal(showModal)}>
           Close
         </button>
       </section>

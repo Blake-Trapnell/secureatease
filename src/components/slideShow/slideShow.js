@@ -1,31 +1,45 @@
-import "./slideshow.scss"
-import { useState } from "react"
+import "./slideshow.scss";
+import { useState } from "react";
 
-const Slideshow = (images) => {
+const Slideshow = ({ images, show, toggleModal }) => {
+	const maxIndex = images.length - 1;
 
-    const [imageLocation, setImageLocation] = useState(0);
-    const maxIndex = images.images.length - 1;
+	const [imageLocation, setImageLocation] = useState(0);
+	const [previousImage, setPreviousImage] = useState(maxIndex);
+	const [nextImage, setNextImage] = useState(1);
 
-    const transitionImage = (moveImageDirection)=> {
-        const newImageLocation = imageLocation + moveImageDirection;
-        console.log(newImageLocation)
-        if(newImageLocation > maxIndex) {
-            setImageLocation(0);
-        }
-        else if (newImageLocation < 0) {
-            console.log(maxIndex)
-            setImageLocation(maxIndex);
-        }
-        else (setImageLocation(imageLocation + moveImageDirection))
-    }
-    
-    return (
-        <div className={"slideshow--outer-container"}>
-            <img className={"slideshow--current-image"} src={images.images[imageLocation]} alt={`slideshow ${0}`}/>
-            <button onClick={()=>transitionImage(-1)} className={"slideshow--navigation-button"}>&#60;</button>
-            <button onClick={()=>transitionImage(1)} className={"slideshow--navigation-button"}>&#62;</button>
-        </div>
-    )
-}
+	const transitionImage = (moveImageDirection) => {
+		const newImageLocation = imageLocation + moveImageDirection;
+		if (newImageLocation > maxIndex) {
+			setImageLocation(0);
+			setPreviousImage(maxIndex);
+		} else if (newImageLocation < 0) {
+			setImageLocation(maxIndex);
+			setPreviousImage(0);
+		} else {
+			setImageLocation(newImageLocation);
+			setPreviousImage(newImageLocation - 1);
+			setNextImage(newImageLocation + 1);
+		}
+	};
+
+	return (
+		<div className={"slideshow--outer-container"}>
+			<div className={"slideshow--current-image"} style={{ backgroundImage: `url(${images[imageLocation]}` }} alt={`slideshow ${images[imageLocation]}`}>
+				<div onClick={() => transitionImage(-1)} className={"slideshow--navigation slideshow--navigation-left"}>
+					<button className={"slideshow--navigation-button"}>&#60;</button>
+				</div>
+				<div className="slideshow--navigation">
+					<div onClick={() => toggleModal(show)} className={"for-sale--button-container action--button-container action--button-mobile"}>
+						<button className="for-sale--action-button action--button action--button-mobile">Close</button>
+					</div>
+				</div>
+				<div onClick={() => transitionImage(1)} className={"slideshow--navigation slideshow--navigation-right"}>
+					<button className={"slideshow--navigation-button"}>&#62;</button>
+				</div>
+			</div>
+		</div>
+	);
+};
 
 export default Slideshow;

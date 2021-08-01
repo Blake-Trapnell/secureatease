@@ -8,6 +8,8 @@ $sealBrown: #44150e;
 $alloyorange: #703107;
 $pureWhite: #ffffff;
 
+$shadow: 5px 5px 5px 3px rgba(0, 0, 0, 0.404);
+
 $landing-border-padding: 30px;
 $double: 60px;
 
@@ -21,8 +23,8 @@ $secondaryFontFamily: "Mulish", sans-serif;
 	font-size: 1.2rem;
 	border: 2px solid $cultured;
 	cursor: pointer;
-	// height: calc(100% - 7px);
-	// width: calc(100% - 7px);
+	height: calc(100% - 7px);
+	width: calc(100% - 7px);
 }
 
 .action--button-container {
