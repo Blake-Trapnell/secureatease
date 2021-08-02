@@ -5,21 +5,15 @@ const Slideshow = ({ images, show, toggleModal }) => {
 	const maxIndex = images.length - 1;
 
 	const [imageLocation, setImageLocation] = useState(0);
-	const [previousImage, setPreviousImage] = useState(maxIndex);
-	const [nextImage, setNextImage] = useState(1);
 
 	const transitionImage = (moveImageDirection) => {
 		const newImageLocation = imageLocation + moveImageDirection;
 		if (newImageLocation > maxIndex) {
 			setImageLocation(0);
-			setPreviousImage(maxIndex);
 		} else if (newImageLocation < 0) {
 			setImageLocation(maxIndex);
-			setPreviousImage(0);
 		} else {
 			setImageLocation(newImageLocation);
-			setPreviousImage(newImageLocation - 1);
-			setNextImage(newImageLocation + 1);
 		}
 	};
 
