@@ -23,17 +23,15 @@ const Cards = () => {
 									<h2 className="card--title">{el.title}</h2>
 									<h3 className="card--text">{el.text}</h3>
 								</div>
-								<div
-									className={
+								<Link
+									to={el.link} className={
 										"card--button-container action--button-container"
 									}
 								>
 									<button className="card--action-button action--button">
-										<Link to={el.link}>
 										{el.buttonText}
-										</Link>
 									</button>
-								</div>
+								</Link>
 							</div>
 						</div>
 					</section>
