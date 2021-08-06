@@ -21,7 +21,7 @@ const Slideshow = ({ images, show, toggleModal }) => {
 		<div className={"slideshow--outer-container"}>
 			<div className={"slideshow--current-image"} style={{ backgroundImage: `url(${images[imageLocation]}` }} alt={`slideshow ${images[imageLocation]}`}>
 				<div onClick={() => transitionImage(-1)} className={"slideshow--navigation slideshow--navigation-left"}>
-					<button className={"slideshow--navigation-button"}>&#60;</button>
+					<button className={"slideshow--navigation-button"}>&#60;-</button>
 				</div>
 				<div className="slideshow--navigation">
 					<div onClick={() => toggleModal(show)} className={"for-sale--button-container action--button-container action--button-mobile"}>
@@ -29,7 +29,7 @@ const Slideshow = ({ images, show, toggleModal }) => {
 					</div>
 				</div>
 				<div onClick={() => transitionImage(1)} className={"slideshow--navigation slideshow--navigation-right"}>
-					<button className={"slideshow--navigation-button"}>&#62;</button>
+					<button className={"slideshow--navigation-button"}>-&#62;</button>
 				</div>
 			</div>
 		</div>
